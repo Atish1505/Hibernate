@@ -1,0 +1,35 @@
+package com.projectwithmaven;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class EmbeddableDemo {
+
+	public static void main(String[] args) {
+		Configuration cfg=new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory factory=cfg.buildSessionFactory();
+		
+		Student st=new Student();
+		st.setName("Aatish");
+		st.setCity("Jalna");
+		
+		Certificates certificate=new Certificates();
+		certificate.setCourse("Java Development");
+		certificate.setDuration("6 Months");
+		
+		st.setCertificate(certificate);
+		
+		Session session=factory.openSession();
+		Transaction tx=session.beginTransaction();
+		
+		session.save(st)
+		
+		tx.commit();
+		factory.close();
+		session.close();
+	}
+
+}

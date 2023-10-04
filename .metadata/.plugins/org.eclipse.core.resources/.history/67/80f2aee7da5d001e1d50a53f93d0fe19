@@ -1,0 +1,9 @@
+package com.customer;
+
+public class Orders {
+
+	public Orders() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

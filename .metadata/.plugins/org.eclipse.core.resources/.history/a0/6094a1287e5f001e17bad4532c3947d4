@@ -1,0 +1,24 @@
+package com.QusAns;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Answers_MTO")
+public class Answers {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int answerId;
+	private String answer;
+	private Questions question;
+	
+	
+	public Answers() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.QusAns;
+
+import java.util.List;
+
+public class Questions {
+	
+	private int questionId;
+	private String question;
+	private List<>
+	
+
+	public Questions() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

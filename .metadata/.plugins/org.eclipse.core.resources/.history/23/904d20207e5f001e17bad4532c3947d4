@@ -1,0 +1,17 @@
+package com.QusAns;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Answers {
+	
+	private int answerId;
+	private String answer;
+	private Questions question;
+	
+	
+	public Answers() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

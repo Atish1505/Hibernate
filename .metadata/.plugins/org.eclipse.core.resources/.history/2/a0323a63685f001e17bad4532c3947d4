@@ -1,0 +1,28 @@
+package com.QusAns;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+       Configuration cfg=new Configuration();
+       cfg.configure("hibernate.cfg.xml");    
+       Questions qs = new Questions();
+       SessionFactory factory = cfg.buildSessionFactory();
+       
+       
+    
+       
+    
+    
+    
+    
+    }
+}

@@ -1,0 +1,24 @@
+package com.MTM;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Many To Many Mapping Started!" );
+        Configuration cfg=new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+        
+        Employee emp1=new Employee();
+        Employee emp2=new Employee();
+        
+        
+    }
+}

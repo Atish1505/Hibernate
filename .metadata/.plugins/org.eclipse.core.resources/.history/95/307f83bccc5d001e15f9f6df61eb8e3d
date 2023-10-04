@@ -1,0 +1,26 @@
+package com.projectwithmaven;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class FetchDataUsingGet_Load {
+
+	public static void main(String[] args) {
+		//Building a object of session factory
+		Configuration cfg=new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory factory=cfg.buildSessionFactory();
+		
+		//retrieving session from session factory & opening session 
+		//here you dont want To Transaction obj becuase transaction is only used while you storing data in DB.
+		Session session= factory.openSession();
+		
+		Student st=(Student)session.get(Student.class, 1);
+		//Get Method
+		
+		
+
+	}
+
+}

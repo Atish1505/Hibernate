@@ -1,0 +1,14 @@
+package com.QusAns;
+
+public class Answers {
+	
+	private int answerId;
+	private String answer;
+	private Questions question;
+	
+	
+	public Answers() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

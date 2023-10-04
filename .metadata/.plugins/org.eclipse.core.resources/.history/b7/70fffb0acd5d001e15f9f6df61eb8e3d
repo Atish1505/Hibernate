@@ -1,0 +1,92 @@
+package com.projectwithmaven;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+@Entity
+@Table(name="Student_Address")
+public class Address {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int Address_ID;
+	@Column(name="STREET", length = 50)
+	private String Street;
+	@Column(name="CITY",length = 20)
+	private String City;
+	@Column(name="is_open")
+	private boolean isOpen;
+	@Temporal(TemporalType.DATE)
+	private Date addeddate;
+	@Transient
+	private double x;
+	@Lob
+	private byte[] image;
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Address(int address_ID, String street, String city, boolean isOpen, Date addeddate, double x, byte[] image) {
+		super();
+		Address_ID = address_ID;
+		Street = street;
+		City = city;
+		this.isOpen = isOpen;
+		this.addeddate = addeddate;
+		this.x = x;
+		this.image = image;
+	}
+	public int getAddress_ID() {
+		return Address_ID;
+	}
+	public void setAddress_ID(int address_ID) {
+		Address_ID = address_ID;
+	}
+	public String getStreet() {
+		return Street;
+	}
+	public void setStreet(String street) {
+		Street = street;
+	}
+	public String getCity() {
+		return City;
+	}
+	public void setCity(String city) {
+		City = city;
+	}
+	public boolean isOpen() {
+		return isOpen;
+	}
+	public void setOpen(boolean isOpen) {
+		this.isOpen = isOpen;
+	}
+	public Date getAddeddate() {
+		return addeddate;
+	}
+	public void setAddeddate(Date addeddate) {
+		this.addeddate = addeddate;
+	}
+	public double getX() {
+		return x;
+	}
+	public void setX(double x) {
+		this.x = x;
+	}
+	public byte[] getImage() {
+		return image;
+	}
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+	
+	
+
+}

@@ -1,0 +1,37 @@
+package com.QusAns;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project Started !" );
+        
+        Configuration cfg=new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory factory=cfg.buildSessionFactory();
+        
+        Questions question=new Questions();
+        question.setQuestion("What is Java ? ");
+        
+        Answers answer1=new Answers();
+        answer1.setAnswer("Java is a programming Langauge");
+        answer1.setQuestion(question);
+        
+        Answers answer2=new Answers();
+        answer2.setAnswer("Java is Secure, safe & robust");
+        answer2.setQuestion(question);
+        
+        Answers answer3=new Answers();
+        answer3.setAnswer("It is completely based on object oriented Prgramming");
+        answer3.setQuestion(question);
+        
+        
+    }
+}

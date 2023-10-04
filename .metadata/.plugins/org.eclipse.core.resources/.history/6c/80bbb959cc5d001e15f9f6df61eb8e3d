@@ -1,0 +1,21 @@
+package com.projectwithmaven;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class FetchDataUsingGet_Load {
+
+	public static void main(String[] args) {
+		//Building a object of session factory
+		Configuration cfg=new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory factory=cfg.buildSessionFactory();
+		
+		factory.openSession()
+		//Get Method
+		
+		
+
+	}
+
+}

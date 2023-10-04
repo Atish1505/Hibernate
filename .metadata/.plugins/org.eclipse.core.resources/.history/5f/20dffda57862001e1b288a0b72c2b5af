@@ -1,0 +1,19 @@
+package com.states;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class States 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Project States Started !" );
+        
+        //buliding session factory
+        SessionFactory factory=new Configuration().configure().buildSessionFactory();
+    }
+}

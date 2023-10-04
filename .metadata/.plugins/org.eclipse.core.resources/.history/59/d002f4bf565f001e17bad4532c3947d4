@@ -1,0 +1,9 @@
+package com.QusAns;
+
+public class Answers {
+
+	public Answers() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

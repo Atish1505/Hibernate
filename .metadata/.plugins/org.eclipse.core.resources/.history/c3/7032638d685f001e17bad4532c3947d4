@@ -1,0 +1,40 @@
+package com.QusAns;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+       Configuration cfg=new Configuration();
+       cfg.configure("hibernate.cfg.xml");    
+       Questions qs = new Questions();
+       SessionFactory factory = cfg.buildSessionFactory();
+       
+       Questions question=new Questions();
+       question.setQuestion("What is Java");
+       
+       Answers answer=new Answers();
+       answer.setAnswer("Java is a programing language");
+       
+       question.setAnswerId(answer);
+       
+       Session session=factory.openSession();
+       Transaction tx =
+       
+    
+       
+    
+    
+    
+    
+    }
+}

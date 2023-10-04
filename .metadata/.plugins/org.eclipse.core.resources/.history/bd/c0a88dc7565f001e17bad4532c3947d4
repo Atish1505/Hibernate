@@ -1,0 +1,39 @@
+package com.QusAns;
+
+public class Answers {
+	private int answerId;
+	private String answer;
+
+	public Answers() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Answers(int answerId, String answer) {
+		super();
+		this.answerId = answerId;
+		this.answer = answer;
+	}
+
+	@Override
+	public String toString() {
+		return "Answers [answerId=" + answerId + ", answer=" + answer + "]";
+	}
+
+	public int getAnswerId() {
+		return answerId;
+	}
+
+	public void setAnswerId(int answerId) {
+		this.answerId = answerId;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	
+}

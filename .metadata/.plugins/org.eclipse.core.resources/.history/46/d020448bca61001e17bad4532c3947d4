@@ -1,0 +1,13 @@
+package com.MTM;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Employee {
+	private int eid;
+	private String name;
+	private List<Project> project;
+
+}

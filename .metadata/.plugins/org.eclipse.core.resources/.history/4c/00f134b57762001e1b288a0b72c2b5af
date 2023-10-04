@@ -1,0 +1,15 @@
+package com.states;
+
+public class Student {
+	private int sid;
+	private String sname;
+	private String scity;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+
+}

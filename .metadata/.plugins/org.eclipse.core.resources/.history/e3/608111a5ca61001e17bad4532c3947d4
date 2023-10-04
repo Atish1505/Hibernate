@@ -1,0 +1,12 @@
+package com.MTM;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Project {
+	private int pid;
+	private String pname;
+	private List<Employee> employee;
+}

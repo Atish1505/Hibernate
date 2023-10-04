@@ -1,0 +1,14 @@
+package com.customer;
+
+public class Orders {
+	
+	private String order_id;
+	private String order_type;
+	private String order_name;
+
+	public Orders() {
+		
+			super();
+	}
+
+}

@@ -1,0 +1,74 @@
+package com.customer;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer_details")
+public class Customer {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="Customer_ID")
+	private int cid;
+	@Column(name="Customer_Name",length = 50)
+	private String cname;
+	@Column(name="Customer_City", length = 30)
+	private String ccity;
+	
+	
+	public Customer() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+
+
+	public Customer(int cid, String cname, String ccity) {
+		super();
+		this.cid = cid;
+		this.cname = cname;
+		this.ccity = ccity;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Customer [cid=" + cid + ", cname=" + cname + ", ccity=" + ccity + "]";
+	}
+
+
+	public int getCid() {
+		return cid;
+	}
+
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+
+	public String getCname() {
+		return cname;
+	}
+
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+
+	public String getCcity() {
+		return ccity;
+	}
+
+
+	public void setCcity(String ccity) {
+		this.ccity = ccity;
+	}
+	
+	
+
+}

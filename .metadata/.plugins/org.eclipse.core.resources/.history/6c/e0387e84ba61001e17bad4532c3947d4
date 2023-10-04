@@ -1,0 +1,10 @@
+package com.QusAns;
+
+public class fetchData {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
